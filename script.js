@@ -25,7 +25,6 @@ async function selectMediaStream() {
 
         // => capturing screen contents as a live mediaStream
         const mediaStream = await navigator.mediaDevices.getDisplayMedia();
-        console.log('media stream => \n', mediaStream);
 
         // => link the media stream with the video element, to have a stage
         videoElement.srcObject = mediaStream;
@@ -49,7 +48,6 @@ const stopStreamedVideo = (videoElem) => {
     const tracks = stream.getTracks();
 
     tracks.forEach((track) => {
-        console.log('track', track);
         track.stop();
     });
 
@@ -62,18 +60,11 @@ const stopStreamedVideo = (videoElem) => {
 captureButton.addEventListener('click', async () => {
     captureButton.disabled = true;
 
-    // console.log('Video Element srcObject', videoElement.srcObject);
-    // console.log('media stream exists', mediaStreamExists);
-
     if(!mediaStreamExists){
        await selectMediaStream();
     }
     else if(mediaStreamExists){
-        console.log('a media stream exists');
-        console.log('srcObject', videoElement.srcObject);
-
         stopStreamedVideo(videoElement);
-        console.log('srcObject after stop streaming', videoElement.srcObject);
 
         // => if no stream exist, capture a new target
         mediaStreamExists || await selectMediaStream();
@@ -104,7 +95,6 @@ showStreamButton.addEventListener('click', async()=>{
             pictureIsInPicture = false;
 
         } catch(error) {
-            console.log('failed to exit picture in picture', error);
             stopStreamedVideo(videoElement);
             location.reload();
         }

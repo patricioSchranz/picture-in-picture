@@ -2,7 +2,7 @@
 
 ## Description
 
-This project allows you to capture any browsertab or opened window and make it omnipresent on the top-level of your screen.
+This project allows you to capture any browsertab or open window and make it omnipresent on the top-level of your screen.
 
 
 ## About
