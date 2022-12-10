@@ -9,11 +9,11 @@ This project allows you to capture any browsertab or open window and make it omn
 
 A modified project from the course - 'JavaScript Web Projects: 20 Projects to Build Your Portfolio' by ZTM.
 
-- the course =>
- - https://zerotomastery.io/courses/javascript-projects/
+the course =>
+- https://zerotomastery.io/courses/javascript-projects/
 
-- the original project =>
- - https://github.com/JacintoDesign/picture-in-picture
+the original project =>
+- https://github.com/JacintoDesign/picture-in-picture
 
 
  ## Hashtags
